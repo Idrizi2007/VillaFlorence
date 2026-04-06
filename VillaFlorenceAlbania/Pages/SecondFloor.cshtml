@@ -1,0 +1,118 @@
+﻿@page
+@model VillaFlorenceAlbania.Pages.SecondFloor
+
+<section class="py-5">
+    <div class="container">
+
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Second Floor</h1>
+            <p class="lead text-muted">
+                Comfort, functionality, and everything you need for a perfect stay.
+            </p>
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- IMAGE CAROUSEL -->
+            <div class="col-md-6">
+                <div id="groundCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#groundCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#groundCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#groundCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#groundCarousel" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <!-- Images -->
+                    <div class="carousel-inner rounded shadow" style="height: 400px;">
+                        <div class="carousel-item active">
+                            <img src="~/img/_DSC5568.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/_DSC5548.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/_DSC5523.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/_DSC5566.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#groundCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#groundCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- TEXT CONTENT -->
+            <div class="col-md-6">
+                <h3 class="mb-3">What You'll Find</h3>
+
+                <p>
+                    Ascend to the second floor, where meticulously designed rooms await.
+                </p>
+
+                <ul class="list-unstyled fs-5 mt-4">
+                    <li class="mb-2">
+                        <i class="bi bi-door-open me-2"></i>
+                        Three double bedrooms and a children's room with 2 single beds
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-droplet-half me-2"></i>
+                        Each  bedroom with a private bathroom, offer comfort and elegance. Two of the double rooms feature expansive balconies with breathtaking views of the pool and garden, perfect for morning coffee or evening relaxation.
+
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2 class="mb-4">Get in Touch</h2>
+        <p class="mb-5">Have questions or want more details? Reach out anytime.</p>
+
+        <div class="row justify-content-center g-4">
+
+            
+                        <!-- Phone -->
+                        <div class="col-md-4">
+                            <div class="p-4 bg-secondary rounded shadow-sm h-100 d-flex flex-column align-items-center justify-content-center">
+                                <i class="bi bi-telephone-fill fs-1 mb-3"></i>
+                                <h5>Phone</h5>
+                                <p class="mb-3">Call us anytime</p>
+                                <a href="tel:+355674924319" class="btn btn-outline-light">
+                                    <i class="bi bi-telephone me-2"></i> +355 67 492 4319
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- EXTRA STYLE -->
+            <style>
+                .carousel {
+                    overflow: hidden;
+                    border-radius: 12px;
+                }
+
+                .carousel-item img {
+                    transition: transform 0.5s ease;
+                }
+
+                .carousel-item:hover img {
+                    transform: scale(1.05);
+                }
+            </style>
