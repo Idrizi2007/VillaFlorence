@@ -14,13 +14,47 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VillaFlorenceAlbania.styles.css" asp-append-version="true" />
+
+    <style>
+        /* NAVBAR DEFAULT (TRANSPARENT) */
+        #mainNavbar {
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+            /* NAVBAR ON SCROLL */
+            #mainNavbar.scrolled {
+                background: rgba(0, 0, 0, 0.9);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            }
+
+        /* FLOATING CALL BUTTON */
+        .call-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #000;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 18px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+            .call-btn:hover {
+                background: #333;
+                transform: scale(1.05);
+            }
+    </style>
 </head>
 
 <body>
 
     <!-- NAVBAR -->
     <header>
-        <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container-fluid px-4">
 
                 <!-- Brand -->
@@ -28,25 +62,25 @@
                     𝓥𝓲𝓵𝓵𝓪 𝓕𝓵𝓸𝓻𝓮𝓷𝓬𝓮
                 </a>
 
-                <!-- Toggle (mobile) -->
+                <!-- Mobile Toggle -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Links -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav align-items-center">
 
                         <li class="nav-item">
                             <a class="nav-link" asp-page="/Index">Home</a>
                         </li>
 
-                        <!-- Optional future links -->
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                        <!-- Contact Button -->
+                        <li class="nav-item ms-3">
+                            <a href="tel:+355674924319" class="btn btn-outline-light">
+                                <i class="bi bi-telephone"></i> Call
+                            </a>
                         </li>
-                        -->
 
                     </ul>
                 </div>
@@ -55,7 +89,7 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTENT (FULL WIDTH) -->
+    <!-- MAIN CONTENT -->
     <main role="main">
         @RenderBody()
     </main>
@@ -65,12 +99,17 @@
         <p class="mb-0">© 2026 Villa Florence Albania</p>
     </footer>
 
+    <!-- FLOATING CALL BUTTON -->
+    <a href="tel:+355674924319" class="call-btn">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
     <!-- SCRIPTS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    <!-- Navbar scroll effect -->
+    <!-- NAVBAR SCROLL EFFECT -->
     <script>
         window.addEventListener("scroll", function () {
             const navbar = document.getElementById("mainNavbar");

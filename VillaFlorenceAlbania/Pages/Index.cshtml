@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero d-flex align-items-center text-white text-center">
     <div class="container">
         <h1 class="display-4 fw-bold">Luxury Villa by Lake Tirana</h1>
@@ -10,7 +10,6 @@
     </div>
 </section>
 
-<!-- HERO STYLE -->
 <style>
     .hero {
         height: 100vh;
@@ -21,130 +20,53 @@
         .hero::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.5);
         }
 
         .hero .container {
             position: relative;
             z-index: 2;
         }
+
+    .card {
+        transition: 0.3s;
+    }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
 </style>
 
-<!-- POOL HIGHLIGHTS -->
+<!-- POOL -->
 <section class="py-5 bg-light text-center">
     <div class="container">
         <h2 class="mb-4"><i class="bi bi-water"></i> All-Season Private Pool</h2>
         <div class="row">
             <div class="col-md-6 mb-3">
                 <div class="p-4 shadow-sm bg-white rounded">
-                    <h4><i class="bi bi-snow"></i> Winter (Oct–Apr)</h4>
-                    <p>Heated & enclosed pool – perfect for relaxing even on cold or rainy days.</p>
+                    <h4><i class="bi bi-snow"></i> Winter</h4>
+                    <p>Heated & enclosed pool for cold days.</p>
                 </div>
             </div>
             <div class="col-md-6 mb-3">
                 <div class="p-4 shadow-sm bg-white rounded">
-                    <h4><i class="bi bi-brightness-high"></i> Summer (May–Sep)</h4>
-                    <p>Open-air pool with stunning views – your perfect summer getaway.</p>
+                    <h4><i class="bi bi-brightness-high"></i> Summer</h4>
+                    <p>Open-air pool with stunning views.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="py-5 text-center">
-    <div class="container">
-        <h2 class="mb-4">Why You'll Love It</h2>
-        <div class="row g-4">
-            <div class="col-md-3">
-                <i class="bi bi-water fs-1"></i>
-                <p>Private pool all year</p>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-thermometer-half fs-1"></i>
-                <p>Heated & enclosed in winter</p>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-tree fs-1"></i>
-                <p>Open-air summer setup</p>
-            </div>
-            <div class="col-md-3">
-                <i class="bi bi-shield-lock fs-1"></i>
-                <p>Total privacy & relaxation</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-5 bg-light">
+<section id="about" class="py-5 text-center">
     <div class="container">
-        <h2 class="mb-4 text-center">My Property</h2>
-        <p class="lead text-center">
-            Indulge in luxury at our stunning villa, nestled by the shores of Lake Tirana.
-            Enjoy your own private pool all year round.
+        <h2 class="mb-4">The Villa</h2>
+        <p class="lead">
+            Luxury villa by Lake Tirana with a private pool, perfect for relaxation and comfort.
         </p>
-        <p>
-            During the colder months, the pool is fully enclosed and sheltered, perfect for relaxing swims
-            even on chilly or rainy days.
-        </p>
-        <p>
-            In summer, the structure is completely removable, transforming the space into an open-air oasis
-            filled with sunlight and nature.
-        </p>
-        <p class="text-center fw-semibold">
-            Ideal for romantic getaways, family weekends, or peaceful stays with friends.
-        </p>
-    </div>
-</section>
-
-<!-- INTERIOR HIGHLIGHTS -->
-<section id="interior" class="py-5 text-center">
-    <div class="container">
-        <h2 class="mb-4">Interior Highlights</h2>
-        <p class="lead mb-5">
-            Experience sophistication and comfort in every detail of this luxury villa.
-        </p>
-
-        <div class="row align-items-center g-4">
-            <div class="col-md-6 text-start">
-                <ul class="list-unstyled fs-5">
-                    <li><i class="bi bi-house-door-fill me-2"></i> 6 spacious bedrooms & 7 modern bathrooms</li>
-                    <li><i class="bi bi-cup-straw me-2"></i> 2 large living rooms with premium furnishings</li>
-                    <li><i class="bi bi-bounding-box-circles me-2"></i> Open-plan first floor with minibar & dining area</li>
-                    <li><i class="bi bi-eye-fill me-2"></i> Panoramic views of pool, jacuzzi, and landscaped garden</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <div id="interiorCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#interiorCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#interiorCarousel" data-bs-slide-to="1"></button>
-                    </div>
-
-                    <div class="carousel-inner rounded shadow-sm" style="height: 75vh;">
-                        <div class="carousel-item active">
-                            <img src="~/img/_DSC5620.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="~/img/_DSC5618.jpg" class="d-block w-100 h-100" style="object-fit: cover;">
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#interiorCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#interiorCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -152,75 +74,104 @@
 <section class="py-5 bg-light text-center">
     <div class="container">
         <h2 class="mb-4">Explore the Villa</h2>
+        <div class="row g-4 justify-content-center">
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+            <!-- Ground -->
+            <div class="col-md-4">
                 <a href="/GroundFloor" class="text-decoration-none text-dark">
-                    <div class="card shadow-sm border-0">
-                        <img src="/img/_DSC5664.jpg" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Ground Floor</h5>
-                            <p class="card-text">
-                                Discover the Ground Floor.
-                            </p>
-                        </div>
+                    <div class="card shadow-sm">
+                        <img src="/img/_DSC5664.jpg" class="card-img-top" style="height:250px;object-fit:cover;">
+                        <div class="card-body"><h5>Ground Floor</h5></div>
                     </div>
                 </a>
             </div>
-        </div>
-    </div>
-</section>
-<section class="py-5 bg-light text-center">
-    <div class="container">
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+            <!-- Second -->
+            <div class="col-md-4">
                 <a href="/SecondFloor" class="text-decoration-none text-dark">
-                    <div class="card shadow-sm border-0">
-                        <img src="/img/_DSC5475.jpg" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Second Floor</h5>
-                            <p class="card-text">
-                                Discover the Second Floor.
-                            </p>
-                        </div>
+                    <div class="card shadow-sm">
+                        <img src="/img/_DSC5475.jpg" class="card-img-top" style="height:250px;object-fit:cover;">
+                        <div class="card-body"><h5>Second Floor</h5></div>
                     </div>
                 </a>
+            </div>
+
+            <!-- Third -->
+            <div class="col-md-4">
+                <a href="/ThirdFloor" class="text-decoration-none text-dark">
+                    <div class="card shadow-sm">
+                        <img src="/img/_DSC5476.jpg" class="card-img-top" style="height:250px;object-fit:cover;">
+                        <div class="card-body"><h5>Third Floor</h5></div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="row justify-content-center">
+    <div class="col-md-6 d-flex justify-content-center">
+        <a href="#guest-access" class="text-decoration-none text-dark w-100">
+            <div class="card shadow-sm border-0">
+                <img src="/img/_DSC5718.jpg" class="card-img-top" style="height: 300px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Guest Access</h5>
+                    <p class="card-text">
+                        Explore all areas of the villa, inside and out.
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+<!-- INTERACTION WITH GUESTS -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Interaction with Guests</h2>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <p>
+                    We are readily available throughout your stay. You can contact us anytime via phone
+                    or Airbnb messages for assistance, information, or extra services like laundry or cleaning.
+                </p>
+                <p class="fw-semibold">
+                    Your comfort and convenience are our top priorities.
+                </p>
+
+                <a href="tel:+355674924319" class="btn btn-dark mt-3">
+                    <i class="bi bi-telephone"></i> +355 67 492 4319
+                </a>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-geo-alt"></i> 15 min to Tirana Center</li>
+                    <li><i class="bi bi-airplane"></i> 30 min to Airport</li>
+                    <li><i class="bi bi-bus-front"></i> 4 min to Bus Station</li>
+                    <li><i class="bi bi-hospital"></i> 20 min to Hospital</li>
+                    <li><i class="bi bi-shop"></i> 6 min to Shopping Center</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
+
+<!-- MAP -->
 <section class="py-5 bg-light text-center">
     <div class="container">
+        <h2 class="mb-4">Location</h2>
 
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <a href="/ThirdFloor" class="text-decoration-none text-dark">
-                    <div class="card shadow-sm border-0">
-                        <img src="/img/_DSC5476.jpg" class="card-img-top" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Third Floor</h5>
-                            <p class="card-text">
-                                Discover the Third Floor.
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+        <div class="ratio ratio-16x9 rounded shadow">
+            <iframe src="https://maps.google.com/maps?q=Lake%20Tirana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    allowfullscreen>
+            </iframe>
         </div>
+
+        <a href="https://maps.app.goo.gl/3rHQ67RZrKzzHRT58" target="_blank"
+           class="btn btn-outline-dark mt-3">
+            Open in Google Maps
+        </a>
     </div>
 </section>
-
-
-
-
-
-<style>
-    .card {
-        transition: 0.3s;
-    }
-
-        .card:hover {
-            transform: scale(1.02);
-        }
-</style>
